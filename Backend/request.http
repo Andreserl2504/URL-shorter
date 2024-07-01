@@ -1,0 +1,10 @@
+POST http://localhost:3000/create
+Content-Type: application/json
+
+{
+    "url": "https://www.youtube.com/watch?v=-9d3KhCqOtU&t=2340s"
+}
+
+###
+
+GET http://localhost:3000/IU452349
