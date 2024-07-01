@@ -2,9 +2,9 @@ POST http://localhost:3000/create
 Content-Type: application/json
 
 {
-    "url": "https://www.youtube.com/watch?v=-9d3KhCqOtU&t=2340s"
+    "url": "https://www.tiktok.com/@tgamer0311/video/7331653631940283654?_r=1&u_code=diikmd1h4je1f8&preview_pb=0&sharer_language=es&_d=ebd5i9801cbg79&share_item_id=7331653631940283654&source=h5_m&timestamp=1718200028&user_id=6964955700171195393&sec_user_id=MS4wLjABAAAABd2xeWyFYnVrFIrC2WsQHNc9pt3oE5IHmYUyF5m7vmjrv6lQGJYn6juqfj-9WUPf&social_share_type=0&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7379572998606423813&share_link_id=262b47c7-0d0e-4ac3-86ac-8899eee9871c&share_app_id=1233&ugbiz_name=MAIN&ug_btm=b8727%2Cb2878&enable_checksum=1"
 }
 
 ###
 
-GET http://localhost:3000/IU452349
+GET http://localhost:3000/IU612550
