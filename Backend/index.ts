@@ -36,7 +36,7 @@ app.post('/create', async (req, res) => {
       res.status(500).json({ Message: 'Something went wrong :,(' })
     }
   } else {
-    res.status(500).json({ Message: 'manin, una url plis' })
+    res.status(500).json({ Message: 'You have to type an URL' })
   }
 })
 
@@ -47,7 +47,6 @@ app.get('/:id', async (req, res) => {
       'SELECT url FROM url WHERE id = ?',
       [id]
     )
-    console.log(url)
     res.status(200).json({ url })
   } catch (e) {
     res.status(500).json({ Message: 'Something went wrong :,(' })
