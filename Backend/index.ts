@@ -1,9 +1,12 @@
 import express from 'express'
 import urlValidationZod from './zod/urlValidationZod.ts'
 import sql, { RowDataPacket } from 'mysql2/promise'
+import cors from 'cors'
 
 const app = express()
 const PORT = process.env.PORT ?? 3000
+
+
 
 const config = {
   host: 'localhost',
@@ -16,9 +19,10 @@ const config = {
 const connection = await sql.createConnection(config)
 
 app.use(express.json())
-
+app.use(cors())
 app.post('/create', async (req, res) => {
   const { url } = req.body
+  console.log(url)
   const { data, success } = urlValidationZod(url)
   if (success) {
     try {

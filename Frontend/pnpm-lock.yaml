@@ -18,8 +18,8 @@ dependencies:
     specifier: ^6.24.0
     version: 6.24.0(react-dom@18.3.1)(react@18.3.1)
   snag-query:
-    specifier: ^1.0.2
-    version: 1.0.2
+    specifier: ^1.0.3
+    version: 1.0.3
 
 devDependencies:
   '@types/react':
@@ -2058,8 +2058,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /snag-query@1.0.2:
-    resolution: {integrity: sha512-dY+xzt6rxdvOOacLYaj1LHTYsEue7RTuiRMz+vHPxyJb/c4jupottdf3vGu5Aw5w0Tz2NSKVBe4tVmo01ZoDww==}
+  /snag-query@1.0.3:
+    resolution: {integrity: sha512-21nD46lb6zD0Z3ZVGv1cXCsULEcxUug9cqPTmnZnjU4eDtHD4G8Fy/bLZx6l9Gf4KP9PMcUofemSHvVenXY0KA==}
     dependencies:
       zod: 3.23.8
     dev: false
