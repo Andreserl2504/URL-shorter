@@ -22,7 +22,6 @@ app.use(express.json())
 app.use(cors())
 app.post('/create', async (req, res) => {
   const { url } = req.body
-  console.log(url)
   const { data, success } = urlValidationZod(url)
   if (success) {
     try {
@@ -37,10 +36,10 @@ app.post('/create', async (req, res) => {
       )
       res.status(201).json({ id })
     } catch (e) {
-      res.status(500).json({ Message: 'Something went wrong :,(' })
+      res.status(500).json({ message: 'Something went wrong :,(' })
     }
   } else {
-    res.status(500).json({ Message: 'You have to type an URL' })
+    res.status(500).json({ message: 'You have to type an URL' })
   }
 })
 
@@ -53,7 +52,7 @@ app.get('/:id', async (req, res) => {
     )
     res.status(200).json({ url })
   } catch (e) {
-    res.status(500).json({ Message: 'Something went wrong :,(' })
+    res.status(500).json({ message: 'Something went wrong :,(' })
   }
 })
 

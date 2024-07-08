@@ -3,7 +3,6 @@ import { useFetchURL } from '../hooks/useFetchURL'
 
 export function FetchURL() {
   const { url, isLoading, isError } = useFetchURL()
-  console.log(url)
   return (
     <>
       <Link to={'/'}>

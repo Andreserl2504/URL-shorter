@@ -5,8 +5,14 @@ import { Snag } from 'snag-query'
 export function useShorter() {
   const [inputValue, setInputValue] = useState<string>('')
   const snag = new Snag({ URL: 'http://localhost:3000' })
-  const snagMutatation = snag.mutateSnag<{ id: string }>({ path: '/create' })
-  const { data: id, mutate } = useMutation<{ id: string }>({
+  const snagMutatation = snag.mutateSnag<{ id?: string }>({
+    path: '/create'
+  })
+  const {
+    data: id,
+    mutate,
+    isError
+  } = useMutation<{ id?: string }>({
     mutationFn: async () => {
       if (snagMutatation) {
         const data = snagMutatation.mutate({ body: { url: inputValue } })
@@ -18,12 +24,10 @@ export function useShorter() {
 
   useEffect(() => {
     const bool = !!inputValue
-    console.log(bool)
     if (bool) {
       mutate()
-      console.log('hi')
     }
-  },[inputValue, mutate])
+  }, [inputValue, mutate])
 
-  return { id, setInputValue }
+  return { id, setInputValue, isError }
 }
