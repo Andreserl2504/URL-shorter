@@ -9,7 +9,7 @@ dotenv.config()
 const PORT = process.env.PORT ?? 3000
 
 const db = createClient({
-  url: 'libsql://hip-azrael-andreserl2504.turso.io',
+  url: process.env.DB_URL ?? "",
   authToken: process.env.DB_TOKEN
 })
 

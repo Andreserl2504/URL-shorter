@@ -4,7 +4,8 @@ import { Snag } from 'snag-query'
 
 export function useShorter() {
   const [inputValue, setInputValue] = useState<string>('')
-  const snag = new Snag({ URL: 'http://localhost:3000' })
+  const urlBackend = import.meta.env.BACK_URL
+  const snag = new Snag({ URL: urlBackend })
   const snagMutatation = snag.mutateSnag<{ id?: string }>({
     path: '/create'
   })
