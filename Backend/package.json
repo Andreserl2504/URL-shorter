@@ -6,7 +6,9 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --loader ts-node/esm index.ts"
+    "start": "node --loader ts-node/esm index.ts",
+    "tsc": "tsc --module esnext index.ts",
+    "start:prod": "node index.js"
   },
   "keywords": [],
   "author": "",

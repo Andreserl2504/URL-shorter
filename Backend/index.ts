@@ -1,5 +1,5 @@
 import express from 'express'
-import urlValidationZod from './zod/urlValidationZod.ts'
+import urlValidationZod from './zod/urlValidationZod'
 import { createClient } from '@libsql/client'
 import dotenv from 'dotenv'
 import cors from 'cors'
