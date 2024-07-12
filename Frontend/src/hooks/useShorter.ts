@@ -4,7 +4,7 @@ import { Snag } from 'snag-query'
 
 export function useShorter() {
   const [inputValue, setInputValue] = useState<string>('')
-  const urlBackend = import.meta.env.BACK_URL
+  const urlBackend = import.meta.env.VITE_BACK_URL
   const snag = new Snag({ URL: urlBackend })
   const snagMutatation = snag.mutateSnag<{ id?: string }>({
     path: '/create'
@@ -12,7 +12,8 @@ export function useShorter() {
   const {
     data: id,
     mutate,
-    isError
+    isError,
+    isPending,
   } = useMutation<{ id?: string }>({
     mutationFn: async () => {
       if (snagMutatation) {
@@ -30,5 +31,5 @@ export function useShorter() {
     }
   }, [inputValue, mutate])
 
-  return { id, setInputValue, isError }
+  return { id, setInputValue, isError, isPending }
 }
